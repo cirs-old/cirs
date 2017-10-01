@@ -1,0 +1,8 @@
+dist: trusty
+
+git:
+  depth: 1
+
+language: rust
+rust: nightly
+sudo: required

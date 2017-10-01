@@ -1,0 +1,36 @@
+[dependencies]
+# It is a goal of the cirs crate to have minimal external dependencies.
+# Please don't add any unless they are essential to the task of creating binary
+# machine code.
+
+[features]
+# Eventually we want to only have the lang items that we need.
+no_core = []
+
+## More feature gates coming soon to a libcirs near you.
+
+[lib]
+crate-type = [
+  "dylib",
+  "staticlib"
+]
+test = false
+
+[package]
+authors = [
+  "The Cirs Project Developers",
+  # Since the libcore is taken from the rust team, its fair to attribute to
+  # them.
+  "The Rust Project Developers"
+]
+license = "MIT/Apache-2.0"
+name = "cirs"
+readme = "README.md"
+version = "0.1.0"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+lto = true
+panic = "abort"
