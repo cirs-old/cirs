@@ -5,6 +5,13 @@
 // http://opensource.org/licenses/MIT>, at your option. This file may not be
 // copied, modified, or distributed except according to those terms.
 
+/*
+Crate:      cirs
+File:       /lib.rs
+Module:     ::
+Visibility: pub
+*/
+
 // No libcore, as we implement parts as needed.
 #![cfg_attr(feature = "no_core", feature(no_core))]
 #![cfg_attr(feature = "no_core", no_core)]
